@@ -209,22 +209,10 @@ Based on the plan produced, suggest 1-3 concrete next actions:
 
 ---
 
-## Empirical Validation
+## Common Mistakes
 
-Tested across 5 software topics x 2 models, evaluated by 2 independent models (Opus + Codex GPT-5.3), using a 120-point evidence-based rubric validated against IEEE 1058, PMBOK, CMMI, Stanford DQ Framework.
-
-```
-Haiku Casual:    25/120 (21%)
-Opus Casual:     45/120 (37%)
-Pass 1 only:     78/120 (65%)
-Full (Pass 1+2): 95/120 (79%)
-
-Haiku + Protocol >> Opus without Protocol
-A $0.03 model with the protocol beats a $0.60 model without it.
-```
-
-This protocol forces 7 operations LLMs skip naturally: research competitors, name assumptions, test against users, imagine failure, make scope cuts, set kill criteria, and calibrate confidence.
-
----
-
-*Built through 6 sessions of empirical research. 50+ experimental conditions. 30+ blind evaluations. Discovered through multi-agent experimentation and distilled into these prompts.*
+- Skipping web search in Step 3 — research is the highest-value step, don't skip it
+- Naming assumptions at 95% confidence — those are facts, not assumptions. Focus on 50-80%
+- Vague pre-mortem ("it failed because of bad execution") — root cause must be specific and structural
+- Pass 2 that agrees with Pass 1 — if you found no weaknesses, you're not trying hard enough
+- Cutting the Pipeline Report — the user needs to see what changed and why

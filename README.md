@@ -135,6 +135,3 @@ MIT
 
 Issues and PRs welcome. If you find a new way the AI rationalizes skipping a step, open an issue — that's exactly what makes the protocol stronger.
 
----
-
-*Built through 6 sessions of empirical research. 50+ experimental conditions. 30+ blind evaluations. The protocol was discovered through multi-agent experimentation and distilled into executable prompts.*

@@ -54,6 +54,19 @@ We tested with Claude Haiku (cheapest model). Same question: "Plan a browser-bas
 
 For $0.11 more, the AI caught a legal risk, discovered a competitor with 1M users, and reconsidered 9 decisions it would have gotten wrong.
 
+### Token breakdown
+
+```
+                    Casual          /lets-cook        Delta
+────────────────────────────────────────────────────────────
+Total tokens:       89,399          486,544           5.4x
+Output tokens:      3,770           9,246             2.5x
+Cost (Haiku):       $0.031          $0.138            4.5x
+Difference:                         $0.107
+```
+
+Most of the /lets-cook cost is **cache read** (408K tokens) — the accumulated context across 14 turns (skill loaded + web search results + plan growing at each step). The actual output (what the agent wrote) is only 2.5x more, but the total context processed is 5.4x.
+
 ## Install
 
 ### Claude Code
